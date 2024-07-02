@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    transition: 1s ease background-color;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: #1e1e1e;
+    color: #fff;
+    hr {
+        background-color: #fff;
+    }
+}
+
+hr{
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#transition {
+    height: 100vh;
+}
+
+#char-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(92, 225, 225);
+}
+
+.star {
+    position: absolute;
+    background-color: #f3bb2f;
+    filter: drop-shadow(0 0 20px #f3bb2f);
+}
+
+.fa-moon {
+    position: absolute;
+    top: 20%;
+    left: 45vw;
+    font-size: 200px;
+    z-index: 2;
+    color: #e2ee92;
+    filter: drop-shadow(0 0 10px #e2ee92);
+    cursor: pointer;
+}
+
+.fa-sun {
+    position: absolute;
+    top: 20%;
+    left: 43vw;
+    font-size: 200px;
+    z-index: 2;
+    color: yellow;
+    filter: drop-shadow(0 0 30px yellow);
+    cursor: pointer;
+}
+
+
+.fa-cloud{
+    position: absolute;
+    font-size: 200px;
+    top: 25%;
+    left: 31.5%;
+    z-index: 3;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.fa-cloud:last-child{
+    left: 52%;
+    transform: scale(-1, 1);
+}
+
+.intro-content {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.intro-content p{
+    margin: 0 auto;
+    width: 500px;
+}
+
+.none {
+    display: none;
+}
+
+
+@keyframes goDown {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(500%);
+    }
+}
+
+@keyframes goUp {
+    0%{
+        transform: translateY(500%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes sunset {
+    0%{
+        background-color: rgb(92, 225, 225);
+    }
+    50%{
+        background-color: #f3bb2f;
+    }
+    100%{
+        background-color: #1e1e1e;
+    }
+}
+
+@keyframes sunrise {
+    0%{
+        background-color: #1e1e1e;
+    }
+    50%{
+        background-color: #f3bb2f;
+    }
+    100%{
+        background-color: rgb(92, 225, 225);
+    }
+
+}
+
+@keyframes cloudAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.8;
+    }
+}
+
+@keyframes cloudsDisappear {
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0;
+    }
+}

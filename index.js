@@ -65,6 +65,27 @@ moon[0].addEventListener('click', () => {
     
 })
 
+cloudsSection[0].addEventListener('click', () => {
+    container.style.backgroundColor = '#1e1e1e'
+    sun[0].style.animation = 'goDown 1s 0s 1'
+    cloudsSection[0].style.animation = 'cloudsDisappear 1s 0s 1'
+    container.style.animation = 'sunset 2s 0s 1'
+    setTimeout(() => {
+        for (j of stars) {
+            j.classList.remove('none')
+        }
+        moonsection[0].classList.remove("none")
+        sunsection[0].classList.add("none")
+        sun[0].style.animation = 'none'
+        moon[0].style.animation = 'goUp 1s 0s 1'
+        setTimeout(() => {
+            moon[0].style.animation = 'none'
+            container.style.animation = 'none'
+            cloudsSection[0].style.animation = 'none'
+        },1000)
+    }, 950);
+})
+
 sun[0].addEventListener('click', () => {
     container.style.backgroundColor = '#1e1e1e'
     sun[0].style.animation = 'goDown 1s 0s 1'

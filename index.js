@@ -27,23 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const moon = document.getElementsByClassName("fa-moon")
 const sun = document.getElementsByClassName("switch-light")
-
-moon[0].addEventListener('click', () => {
-    document.body.classList.remove('dark')
-    document.body.classList.add('light')
-})
-
-sun[0].addEventListener('click', () => {
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
-})
-
 const stars = document.getElementsByClassName('star')
 const moonsection = document.getElementsByClassName('moon')
 const sunsection = document.getElementsByClassName('sun')
 const cloudsSection = document.getElementsByClassName('clouds')
 
 moon[0].addEventListener('click', () => {
+    document.body.classList.remove('dark')
+    document.body.classList.add('light')
     container.style.backgroundColor = 'rgb(92, 225, 225)'
     moon[0].style.animation = 'goDown 1s 0s 1'
     container.style.animation = 'sunrise 2s 0s 1'
@@ -67,6 +58,8 @@ moon[0].addEventListener('click', () => {
 
 for(let h of sun){
     h.addEventListener('click', () => {
+        document.body.classList.add('dark')
+        document.body.classList.remove('light')
         container.style.backgroundColor = '#1e1e1e'
         sun[0].style.animation = 'goDown 1s 0s 1'
         cloudsSection[0].style.animation = 'cloudsDisappear 1s 0s 1'
